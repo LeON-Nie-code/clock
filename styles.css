@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  flex-direction: column;
+}
+#clock {
+  width: 400px;
+  height: 400px;
+}
+.hand {
+  transform-origin: 50% 50%;
+  transform: rotate(0deg);
+  transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+.second {
+  stroke: red;
+}
+#controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+input {
+  width: 50px;
+}
+#digitalTime {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
