@@ -1,70 +1,72 @@
-secondAngleOfClock = 0;
-minuteAngleOfClock = 0;
-hourAngleOfClock = 0;
-
 date_of_clock = new Date();
 
+
+
 function updateClock() {
-  const now = new Date();
-  const seconds = now.getSeconds();
-  const minutes = now.getMinutes();
-  const hours = now.getHours();
+
 
   date_of_clock.setSeconds(date_of_clock.getSeconds() + 1);
   const seconds_of_clock = date_of_clock.getSeconds();
   const minutes_of_clock = date_of_clock.getMinutes();
   const hours_of_clock = date_of_clock.getHours();
-  
-  
 
-  if(seconds == 0)
-  {
-    const secondAngle = seconds * 6;
 
-  }
-  const secondAngle = seconds * 6;
-  const minuteAngle = minutes * 6 + seconds * 0.1;
-  const hourAngle = hours * 30 + minutes * 0.5;
+
+
+  const secondAngle = hours_of_clock * 60 * 360 + minutes_of_clock * 360 + seconds_of_clock * 6;
+  const minuteAngle = hours_of_clock * 360 + minutes_of_clock * 6 + seconds_of_clock * 0.1;
+  const hourAngle = hours_of_clock * 30 + minutes_of_clock * 0.5;
 
   document.getElementById('second').style.transform = `rotate(${secondAngle}deg)`;
   document.getElementById('minute').style.transform = `rotate(${minuteAngle}deg)`;
   document.getElementById('hour').style.transform = `rotate(${hourAngle}deg)`;
 
   const digitalTime = document.getElementById('digitalTime');
-  digitalTime.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  digitalTime.textContent = `${hours_of_clock.toString().padStart(2, '0')}:${minutes_of_clock.toString().padStart(2, '0')}:${seconds_of_clock.toString().padStart(2, '0')}`;
 }
 
 function setTime() {
-  const hours = parseInt(document.getElementById('hourInput').value) || 0;
-  const minutes = parseInt(document.getElementById('minuteInput').value) || 0;
-  const seconds = parseInt(document.getElementById('secondInput').value) || 0;
-  
-  const now = new Date();
-  now.setHours(hours);
-  now.setMinutes(minutes);
-  now.setSeconds(seconds);
+  const hours = parseInt(document.getElementById('hourInput').value);
+  const minutes = parseInt(document.getElementById('minuteInput').value);
+  const seconds = parseInt(document.getElementById('secondInput').value);
 
-  const secondAngle = seconds * 6;
-  const minuteAngle = minutes * 6 + seconds * 0.1;
-  const hourAngle = hours * 30 + minutes * 0.5;
 
-  document.getElementById('second').style.transform = `rotate(${secondAngle}deg)`;
-  document.getElementById('minute').style.transform = `rotate(${minuteAngle}deg)`;
-  document.getElementById('hour').style.transform = `rotate(${hourAngle}deg)`;
+  if (isNaN(hours) || hours < 0 || hours > 23) {
+    alert('Invalid hours');
+    return;
+  }
 
-  const digitalTime = document.getElementById('digitalTime');
-  digitalTime.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  if (isNaN(minutes) || minutes < 0 || minutes > 59) {
+    alert('Invalid minutes');
+    return;
+  }
+
+  if (isNaN(seconds) || seconds < 0 || seconds > 59) {
+    alert('Invalid seconds');
+    return;
+  }
+
+  console.log(hours, minutes, seconds);
+
+  date_of_clock.setHours(hours);
+  date_of_clock.setMinutes(minutes);
+  date_of_clock.setSeconds(seconds);
+
+
 }
 
 function resetTime() {
-  document.getElementById('hourInput').value = '';
-  document.getElementById('minuteInput').value = '';
-  document.getElementById('secondInput').value = '';
+  const now = new Date();
+  date_of_clock.setHours(now.getHours());
+  date_of_clock.setMinutes(now.getMinutes());
+  date_of_clock.setSeconds(now.getSeconds());
+  console.log('Time reset');
 }
 
 
 
 document.getElementById('setTime').addEventListener('click', setTime);
+document.getElementById('resetTime').addEventListener('click', resetTime);
 
 setInterval(updateClock, 1000);
 updateClock();
