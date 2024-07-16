@@ -1,0 +1,294 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+a {
+  color: #763880;
+  text-decoration: none;
+}
+/* 使用这个类来显示hover的下划线 */
+a:hover {
+  text-decoration: underline;
+}
+
+
+underline {
+  color: #763880;
+  text-decoration: none;
+}
+
+underline:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  min-width: 640px;
+  min-height: 480px;
+  background: #E5E5E5 url(../image/popup_bg.png) no-repeat top right;
+}
+
+
+#main {
+  position: relative;
+  margin: auto;
+  width: 640px;
+  height: 480px;
+  background: url(../image/popup_shadow.png) no-repeat 50px 346px;
+}
+
+.welcome {
+  position: absolute;
+  top: 64px;
+  left: 48px;
+  width: 515px;
+  height: 226px;
+  background: #93278F url(../image/popup_greeting.png) no-repeat 30px 46px;
+}
+
+.welcome_corner {
+  position: absolute;
+  left: 80px;
+  top: 288px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #93278F transparent;
+  border-width: 48px 48px 0 0;
+}
+
+.info_corner {
+  position: absolute;
+  top: 288px;
+  left: 592px;
+  border-color: transparent #CCCCCC;
+  border-width: 16px 0 0 16px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+
+#info {
+  position: absolute;
+  top: 96px;
+  left: 176px;
+  padding: 32px;
+  width: 352px;
+  height: 208px;
+  background: #F2F2F2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#info #account {
+  position: relative;
+  font-size: 13px;
+  margin: 10px 0px 1px 15px;
+  padding-left: 40px;
+  background: url(../image/account.gif) no-repeat 0 0;
+  float: left;
+  margin: 10px 0px 1px 15px;
+}
+
+
+#info .user_name {
+  float: left;
+  color: #93278F;
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 34px;
+}
+
+#info .user_name_display {
+  float: left;
+  color: #93278F;
+  font-family: Arial;
+  font-weight: lighter;
+  font-size: 34px;
+}
+
+#info #info_content {
+  float: left;
+  margin: -8px 0px 0px 0px;
+}
+
+#info .Duration_number {
+  float: left;
+  margin: 15px 0 0 18px;
+  padding-top: 4px;
+  height: 28px;
+  font-size: 28px;
+  color: #ec6677;
+
+}
+
+#info .Duration, .Usage {
+  position: relative;
+  clear: left;
+  float: left;
+  width: 56px;
+  height: 32px;
+  margin: 22px 0px 0px 0px;
+  text-align: right;
+  font-size: 13px;
+}
+
+
+
+#info .usage_bar {
+  position: relative;
+  float: left;
+  margin: 24px 0 0 16px;
+  width: 280px;
+  height: 32px;
+  background: url(../image/usage_bg.gif) repeat-y;
+}
+
+.usage_bar #usage_value {
+  position: relative;
+  float: left;
+  height: 32px;
+  max-width: 280px;
+  background: #BC9BCC;
+
+}
+
+
+#info .usage_bar .Usage_number{
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  float: none;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  color:#565656;
+  font-size: 25px;
+}
+
+#info .usage_bar .number_bar {
+  position: absolute;
+  top: -16px;
+  right: 14px;
+  font-family: Arial;
+  font-size: 13px;
+  color: #969696;
+}
+
+#info .number_bar li {
+  float: right;
+  width: 52px;
+  text-align: right;
+}
+
+#info .usage_bar #usage_value {
+  position: relative;
+  float: left;
+  height: 32px;
+  max-width: 280px;
+  background: #BC9BCC;
+}
+
+#info .usage_bar .stripe {
+  position: absolute;
+  top: 0;
+  right: 4px;
+  width: 4px;
+  height: 100%;
+  background: #F2F2F2;
+}
+
+#info .usage_bar .second_stripe {
+  right: 12px;
+}
+
+
+
+.Button_area {
+  position: absolute;
+  top: 304px;
+  right: 32px;
+  width: 208px;
+  height: 80px;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.Button_area .disconnect {
+  margin: 16px;
+  width: 174px;
+  height: 46px;
+  border: #B2AABE solid 1px;
+  background: #C0BDCC url(../image/disconnect.png) no-repeat center 0;
+  overflow: hidden;
+}
+
+.Button_area .disconnect:hover {
+  background-color: #D5D1E1;
+  background-position: center -47px;
+}
+
+.Button_area .disconnect:active {
+  background-color: #B1AAC4;
+  background-position: center -94px;
+}
+
+.Button_area .disconnect:disable {
+  background-color: #CFCFCF;
+  background-position: center -141px;
+}
+
+#links {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  width: 234px;
+  list-style: none;
+}
+
+#links li {
+  float: left;
+  margin: 0px 12px 0px 0px;
+  font-size: 11px;
+  font-family: Arial;
+}
+
+/* 使用last-child来设置最后一个元素的样式 */
+
+#links li:last-child {
+  float: right;
+  margin: 0;
+}
+
+#links li a {
+  display: block;
+  padding: 16px 0 0 26px;
+  height: 16px;
+}
+
+#links #link_info {
+  background: url(../image/popup_info.gif) no-repeat 2px 2px;
+}
+
+#links #link_lib {
+  background: url(../image/popup_lib.gif) no-repeat 2px 2px;
+}
+
+#links #link_learn {
+  background: url(../image/popup_learn.gif) no-repeat 4px 1px;
+}
+
+#links #link_mail {
+  background: url(../image/popup_mail.gif) no-repeat 0 1px;
+}

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <!-- 页面标题 -->
+  <title>清华大学校园网(IPv4) Tsinghua University Network</title>
+  <!-- 引入外部CSS样式文件 -->
+  <link rel="stylesheet" type="text/css" href="css/styles_login.css" />
+  <!-- 引入外部JavaScript文件 -->
+  <script type="text/javascript" src="js/script_login.js"></script>
+  <script type="text/javascript" src="js/utils.js"></script>
+</head>
+
+<body>
+  <div id="main">
+    <!-- 页头部分 -->
+    <div id="head">
+      <a id="network"></a>
+    </div>
+    <!-- 二维码图片部分 -->
+    <div class="qr-jpg">
+      <img src="image/qr.jpg" alt="QR Code" />
+      <p>欢迎关注"清华大学信息服务"</p>
+    </div>
+    <!-- 内容部分 -->
+    <div id="content">
+      <div class="welcome"></div>
+      <div class="corner_welcome"></div>
+      <!-- 通知部分 -->
+      <div id="notification">
+        <div class="corner"></div>
+        <div id="notice">
+          <p>&nbsp;<br /><br />&nbsp;</p>
+          <div class="text" align="center">
+            Here is a notification
+          </div>
+        </div>
+      </div>
+      <!-- 登录表单部分 -->
+      <div id="login">
+        <div id="login_content">
+          <!-- 隐藏的输入框，用于指定动作为登录 -->
+          <input type="hidden" name="action" value="login">
+          <label>
+            <!-- 用户名标签 -->
+            <div class="label_text">用户名<p class="english">User ID</p></div>
+            <!-- 用户名输入框 -->
+            <input type="text" name="username" id="username" onfocus="hide_account()">
+            <!-- 用户名说明文本 -->
+            <div class="instruction" id="account">校园网账户<p class="english">Account of Tsinghua University Network</div>
+          </label>
+          <label>
+            <!-- 密码标签 -->
+            <div class="label_text">密码<p class="english">Password</p></div>
+            <!-- 密码输入框 -->
+            <input type="password" name="password" id="password" autocorrect="off" autocapitalize="off">
+          </label>
+          <label id="remember" style="margin-left: 46px;">
+            <!-- 记住我 复选框 -->
+            <input type="checkbox" name="save_me" id="cookie" value="yes" checked>
+            <!-- 复选框说明文本 -->
+            <div class="checkbox_text">访问校外（IPv4）网络<p class="english">Access to the Internet<br> (IPv4)</p></div>
+          </label>
+          <!-- 连接按钮 -->
+          <button class="connect" onclick="validateForm()"></button>
+        </div>
+      </div>
+      <div class="corner_login"></div>
+      <!-- 不同系统对应的下载 -->
+      <div id="download">
+        <ul id="system">
+          <li><a class="windows" href="#" title="Windows">Windows</a></li>
+          <li><a class="mac" href="#" title="MacOS">MacOS</a></li>
+          <li><a class="linux" href="#" title="Linux">Linux</a></li>
+          <li><a class="android" href="#" title="Android">Android</a></li>
+          <li><a class="ios" href="#" title="iOS">iOS</a></li>
+        </ul>
+      </div>
+      <!-- 工具部分 -->
+      <ul id="widget">
+        <li class="bookmark"><a href="#">收藏<p class="english">Bookmark This Page</p></a></li>
+        <li class="help"><a href="#">帮助<p class="english">Help</p></a></li>
+        <li class="contact">
+          <div class="title">联系<p class="english">Contact</p></div>
+          <div class="detail english">+86-10-62784859<a href="mailto:its@tsinghua.edu.cn">its@tsinghua.edu.cn</a></div>
+        </li>
+      </ul>
+    </div>
+    <!-- 页脚部分 -->
+    <div id="foot">清华大学信息化技术中心<p class="english">Information Technology Center of Tsinghua University</p></div>
+  </div>
+
+</body>
+
+</html>

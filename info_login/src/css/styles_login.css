@@ -1,0 +1,459 @@
+@charset "utf-8";
+
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* 链接样式 */
+a {
+  color: #763880;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 提交按钮和普通按钮样式 */
+input[type=submit], button {
+  cursor: pointer;
+  border-radius: 0;
+}
+
+input[type=submit][disabled=disabled], button:disabled {
+  cursor: default;
+}
+
+/* 文本和密码输入框样式 */
+input[type=text], input[type=password] {
+  border-radius: 0;
+}
+
+/* 列表样式重置 */
+ul {
+  list-style: none;
+}
+
+/* 英文字体样式 */
+.english {
+  font-family: Verdana;
+}
+
+/* 页面背景和最小宽度 */
+body {
+  min-width: 768px;
+  background: #DADBDC url(../image/background.png) repeat-x top;
+}
+
+/* 主容器样式 */
+#main {
+  margin: auto;
+  margin-left: 445px;
+  position: relative;
+  width: 640px;
+  height: 480px;
+  background-image: url(../image/popup_shadow.gif);
+  background-repeat: no-repeat;
+  background-position: 48px 344px;
+}
+
+/* 页头样式 */
+#head {
+  float: left;
+  margin: 16px 0 32px -48px;
+  background: url(../image/logo.gif) no-repeat;
+}
+
+/* 网络标志样式 */
+#network {
+  display: block;
+  margin: 20px 0 4px 48px;
+  width: 240px;
+  height: 72px;
+  background: url(../image/title.png) no-repeat;
+}
+
+/* 二维码部分样式 */
+.qr-jpg {
+  float: right;
+  margin-top: 30px;
+  margin-right: -120px;
+  text-align: center;
+}
+.qr-jpg img {
+  width: 100px;
+  height: 100px;
+}
+.qr-jpg p {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #6E6F6F;
+}
+
+/* 内容容器样式 */
+#content {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 150%;
+  height: 480px;
+  background: url(../image/content_shadow.png) no-repeat 0 400px;
+}
+
+/* 欢迎部分样式 */
+.welcome {
+  position: absolute;
+  width: 720px;
+  height: 304px;
+  background: #93278F url(../image/greeting.png) no-repeat 32px 28px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* 欢迎部分的角样式 */
+.corner_welcome {
+  border-style: solid;
+  position: absolute;
+  top: 304px;
+  left: 32px;
+  border-color: #93278F transparent;
+  border-width: 48px 48px 0 0;
+}
+
+/* 登录部分的角样式 */
+.corner_login {
+  border-style: solid;
+  position: absolute;
+  top: 336px;
+  left: 688px;
+  border-color: #F2F2F2 transparent;
+  border-width: 48px 48px 0 0;
+}
+
+/* 通知部分样式 */
+#notification {
+  display: block;
+  position: absolute;
+  top: 128px;
+  left: -16px;
+  width: 320px;
+  height: 172px;
+}
+
+#notification .corner {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent #763880;
+  border-width: 16px 16px 0 0;
+}
+
+#notice {
+  position: relative;
+  width: 320px;
+  height: 160px;
+  background: #992995 url(../image/notice.png) no-repeat 14px 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 通知文本样式 */
+#notification .text {
+  position: absolute;
+  top: 48px;
+  left: 48px;
+  color: #FFF;
+}
+
+/* 登录表单容器样式 */
+#login {
+  position: absolute;
+  top: 32px;
+  left: 304px;
+  width: 464px;
+  height: 304px;
+  background: #F2F2F2;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#login_content {
+  margin: 32px;
+}
+
+/* 标签样式 */
+label {
+  float: left;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+label:first-child {
+  position: relative;
+}
+
+/* 输入提示文本样式 */
+.instruction {
+  top: 37px;
+  left: 142px;
+  position: absolute;
+  font-size: 13px;
+  color: #999999;
+}
+
+/* 标签文本样式 */
+.label_text {
+  float: left;
+  height: 48px;
+  font-size: 21px;
+}
+
+.label_text .english {
+  font-size: 16px;
+}
+
+/* 输入框样式 */
+input[type=text] {
+  float: right;
+  width: 298px;
+  height: 42px;
+  border: #E6E6E6 solid 1px;
+  padding: 2px;
+  background: #FFF;
+  font-size: 34px;
+}
+input[type=password] {
+  float: right;
+  width: 298px;
+  height: 42px;
+  border: #E6E6E6 solid 1px;
+  padding: 2px;
+  background: #FFF;
+  font-size: 34px;
+}
+
+input[type=text]:hover, input[type=password]:hover {
+  border-color: #CCCCCC;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  border-color: #FBB03B;
+  box-shadow: 0 0 8px rgba(251, 176, 59, 0.8);
+}
+
+input[type=text][disabled=disabled], input[type=password][disabled=disabled] {
+  background: #F2F2F2;
+}
+
+input[type=text].form-error, input[type=password].form-error {
+  border-color: #ED1C24;
+}
+
+/* 复选框样式 */
+input[type=checkbox] {
+  float: left;
+  margin: 4px 4px 0 0;
+}
+
+/* 记住我标签样式 */
+#remember {
+  margin-left: 96px;
+  width: auto;
+  height: 32px;
+}
+
+#remember .checkbox_text {
+  float: left;
+  font-size: 13px;
+  color: #93278f;
+  font-weight: 600;
+}
+
+/* 连接按钮样式 */
+.connect {
+  margin-top: 16px;
+  width: 398px;
+  height: 46px;
+  border: #9CB22E solid 1px;
+  background: #C0CE55 url(../image/connect.png) no-repeat center 0;
+  overflow: hidden;
+}
+
+.connect:hover {
+  background-color: #D2E042;
+  background-position: center -47px;
+}
+
+.connect:active {
+  background-color: #AAC30B;
+  background-position: center -94px;
+}
+
+.connect:disabled {
+  background-color: #CCCFB7;
+  background-position: center -141px;
+}
+
+/* 用户名说明文本样式 */
+#account {
+  float: right;
+  font-size: 13px;
+  padding-left: 40px;
+  background: url(../image/account.gif) no-repeat 0 0;
+}
+
+#account .english {
+  font-size: 11px;
+}
+
+/* 下载部分样式 */
+#download {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 112px;
+  background: url(../image/download.png) no-repeat 0 8px;
+}
+
+/* 操作系统列表样式 */
+#system {
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  width: 320px;
+  height: 48px;
+  background: #787878;
+}
+
+#system li a {
+  position: absolute;
+  bottom: 16px;
+  padding-top: 36px;
+  color: #FFF;
+  font-size: 13px;
+  font-family: Arial;
+}
+
+#system li:last-child a {
+  margin-right: 0;
+}
+
+#system .windows {
+  width: auto;
+  height: auto;
+  left: 16px;
+  background-image: url(../image/windows.gif);
+  background-repeat: no-repeat;
+  background-position: 2px 0;
+}
+
+#system .mac {
+  width: auto;
+  height: auto;
+  left: 80px;
+  background-image: url(../image/mac.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+#system .linux {
+  width: auto;
+  height: auto;
+  left: 144px;
+  background-image: url(../image/linux.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+#system .android {
+  width: auto;
+  height: auto;
+  left: 207px;
+  background-image: url(../image/android.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+#system .ios {
+  width: 100px;
+  height: auto;
+  left: 271px;
+  background-image: url(../image/ios.gif);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+/* 工具栏样式 */
+#widget {
+  position: absolute;
+  bottom: 0;
+  left: 300px;
+  width: 464px;
+  height: 32px;
+}
+
+#widget li {
+  float: left;
+  padding-left: 36px;
+  font-size: 12px;
+  color: #000;
+}
+
+#widget li a {
+  color: #000;
+}
+
+#widget .detail a {
+  color: #4E4E4E;
+}
+
+#widget .detail {
+  float: left;
+  margin: 0 0 0 7px;
+}
+
+#widget .english {
+  font-size: 11px;
+  color: #4F4F4F;
+}
+
+.contact .title {
+  float: left;
+}
+
+#widget .bookmark {
+  float: left;
+  background: url(../image/bookmark.gif) no-repeat 8px 0;
+}
+
+#widget .help {
+  float: left;
+  background: url(../image/help.gif) no-repeat 4px 0;
+}
+
+#widget .contact {
+  float: right;
+  background: url(../image/contact.gif) no-repeat 4px 0;
+}
+
+#widget .contact a {
+  display: block;
+}
+
+/* 页脚样式 */
+#foot {
+  float: right; /* 使元素浮动在右边 */
+  margin: 60px -125px 10px 10px; /* 调整边距，右移时右边距为 0 */
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  font-size: 12px;
+  color: #6E6E6E;
+}
+
+#foot .english {
+  font-size: 11px;
+}

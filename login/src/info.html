@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>清华大学校园网&nbsp;Tsinghua&nbsp;University&nbsp;Network</title>
+  <link rel="stylesheet" type="text/css" href="css/styles_info.css" />
+  <script type="text/javascript" src="js/script_info.js"></script>
+
+</head>
+
+<body>
+  <!-- 这是网页的主体部分，包括了用户的信息展示、连接状态、连接时长、已用流量等信息，以及一些常用的链接，如清华大学信息门户、图书馆、网络学堂、邮箱等。 -->
+  <div id="main">
+    <!-- 这是紫色的欢迎背景 -->
+    <div class="welcome"></div>
+    <!-- 这是紫色的小三角 -->
+    <div class="welcome_corner"></div>
+    <!-- 这是灰色的小三角 -->
+    <div class="info_corner"></div>
+    <!-- 这是白色的信息区域 -->
+    <div id="info">
+      <!-- 这是用户名 -->
+      <h2 class="user_name" id="user_name">nla22</h2>
+      <!-- 这是自服务的链接 -->
+      <a id="account" href="https://usereg.tsinghua.edu.cn" target="_blank">自服务
+        <p>Account&nbsp;Settings</p>
+      </a>
+      <!-- 这是连接状态 -->
+      <div id="info_content">
+        <!-- 这是连接时间 -->
+        <div class="Duration">已连接<p>Duration</p>
+        </div>
+        <div class="Duration_number">00:00:01</div>
+        <!-- 这是已用流量 -->
+        <div class="Usage">已用流量<p>(IPv4)</p><p>Usage</p>
+        </div>
+        <!-- 这是显示流量的bar -->
+        <div class="usage_bar">
+          <ul class="number_bar">
+            <li>125</li><li>100</li><li>75</li><li>50</li>
+          </ul>
+          <div id="usage_value" style="width:105px;"></div>
+          <div class="stripe"></div>
+          <div class="stripe second_stripe"></div>
+          <div class="Usage_number">50.00G</div>
+        </div>
+      </div>
+    </div>
+    <!-- 这是断开连接的按钮 -->
+    <div class="Button_area">
+      <button class="disconnect" onclick="disconnect()"></button>
+    </div>
+    <!-- 这是一些常用的链接 -->
+    <ul id="links">
+      <li><a id="link_info" href="http://info.tsinghua.edu.cn" target="_blank" title="清华信息门户&#10;info.tsinghua">Info</a>
+      </li>
+      <li><a id="link_lib" href="http://lib.tsinghua.edu.cn/" target="_blank" title="清华图书馆&#10;lib.tsinghua">Lib</a></li>
+      <li><a id="link_learn" href="http://learn.tsinghua.edu.cn/" target="_blank"
+          title="清华网络学堂&#10;learn.tsinghua">Learn</a></li>
+      <li><a id="link_mail" href="http://mail.tsinghua.edu.cn/" target="_blank" title="清华邮箱&#10;mail.tsinghua">Mail</a>
+      </li>
+    </ul>
+
+  </div>
+
+</body>
+
+</html>
